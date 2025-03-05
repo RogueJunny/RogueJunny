@@ -49,15 +49,14 @@ function displayMovies(filteredMovies){
                     <button class="btn btn-sm ${movie.status === "To Watch" ? "btn-primary" : "btn-outline-primary"}" onclick="updateStatus(${i}, 'To Watch')">To Watch</button>
                     <button class="btn btn-sm ${movie.status === "Watching" ? "btn-warning" : "btn-outline-warning"}" onclick="updateStatus(${i}, 'Watching')">Watching</button>
                     <button class="btn btn-sm ${movie.status === "Completed" ? "btn-success" : "btn-outline-success"}" onclick="updateStatus(${i}, 'Completed')">Completed </button>
+                        <button class="btn btn-sm ${movie.rating === 0 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 0)">0 Star</button>
+                    <button class="btn btn-sm ${movie.rating === 1 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 1)">1 Star</button>
+                    <button class="btn btn-sm ${movie.rating === 2 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 2)">2 Stars</button>
+                    <button class="btn btn-sm ${movie.rating === 3 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 3)">3 Stars</button>
+                    <button class="btn btn-sm ${movie.rating === 4 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 4)">4 Stars</button>
+                    <button class="btn btn-sm ${movie.rating === 5 ? "btn-info" : "btn-outline-info"}" onclick="updateRating(${i}, 5)">5 Stars</button>
                 </div>
-                <div class="rating-buttons">
-                    <button class="btn btn-sm ${movie.rating === 0 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 0)">0 Star</button>
-                    <button class="btn btn-sm ${movie.rating === 1 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 1)">1 Star</button>
-                    <button class="btn btn-sm ${movie.rating === 2 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 2)">2 Stars</button>
-                    <button class="btn btn-sm ${movie.rating === 3 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 3)">3 Stars</button>
-                    <button class="btn btn-sm ${movie.rating === 4 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 4)">4 Stars</button>
-                    <button class="btn btn-sm ${movie.rating === 5 ? "btn-primary" : "btn-outline-primary"}" onclick="updateRating(${i}, 5)">5 Stars</button>
-                </div>
+              
                 <button class="btn btn-danger btn-sm" onclick="deleteMovie(${i})">Delete</button>
             </div>
         `;
